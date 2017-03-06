@@ -69,12 +69,19 @@
     left: 0;
     width: 402px;
     height: 50px;
+    padding: 0 24px;
+    font-size: 15px;
+    line-height: 1px;
+    color: $btn-color;
+    letter-spacing: 1.6px;
     box-shadow: none;
     border: none;
     background: $btn-offres-back;
     margin: 0 auto;
     //padding-top: 2px;
     border-radius: 45px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
 
     &:after{
       position: absolute;
@@ -93,7 +100,11 @@
     }
 
     & span{
-      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      text-align: center;
       font-size: 14px;
       font-family: 'proximanova-semibold', sans-serif;
       color: $btn-offres-color;
@@ -176,7 +187,7 @@
 
     & span{
       font-size: 17px;
-      margin: 4px 0 0 34px;
+      margin: 2px 0 0 34px;
     }
 
     &:before{
@@ -203,7 +214,7 @@
     &:hover{
 
       & span{
-        margin: 4px 0 0 54px;
+        margin: 2px 0 0 54px;
       }
 
       &:after{
@@ -213,6 +224,7 @@
 
       &:before{
         opacity: 1;
+        animation: none;
       }
     }
   }

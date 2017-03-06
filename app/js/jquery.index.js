@@ -2,16 +2,22 @@ var arr = [];
 max = 8;
 min = 2;
 
-function NormalSort (a, b) {
-    if (a > b) return 1;
-    if (a < b) return -1;
-}
-
 for(i = 0; i <= 9; i++){
     test = Math.floor(Math.random() * (max - min)) + min;
     arr.push(test);
 }
-arr.sort(NormalSort)
+
+for(i = 0; i <= 9; i++){
+    console.log(arr[i]);
+    for(s = 0; s <= 9; s++){
+        if (arr[i] < arr[s]){
+            var mas = arr[i];
+            arr[i] = arr[s];
+            arr[s] = mas;
+        }
+    }
+}
+
 console.log(arr);
 
 /*---------- Открытие мобильного меню ---------*/
