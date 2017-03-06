@@ -1,0 +1,251 @@
+.btn {
+  display: inline-block;
+  position: relative;
+  height: 47px;
+  padding: 0 24px;
+  margin: 10px auto;
+  border: 1px $btn-border solid;
+  border-radius: 25px;
+  font-family: proximanova-semibold;
+  font-size: 15px;
+  line-height: 1px;
+  color: $btn-color;
+  letter-spacing: 1.6px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+
+  & span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+  }
+
+  &_big{
+    height: 40px;
+    padding: 0 53px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 50px;
+
+    & span{
+      padding-top: 3px;
+    }
+  }
+
+  &_search{
+    height: 40px;
+    padding: 0 20px 0 40px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 1px $hero-btnRight-border solid;
+    border-radius: 50px;
+    background-color: $hero-btnRight-back;
+
+    & span{
+      padding-top: 3px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      background: url(../img/search-icon.png) no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__offres{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 0;
+    width: 402px;
+    height: 50px;
+    box-shadow: none;
+    border: none;
+    background: $btn-offres-back;
+    margin: 0 auto;
+    //padding-top: 2px;
+    border-radius: 45px;
+
+    &:after{
+      position: absolute;
+      top: 19px;
+      right: 24px;
+      width: 10px;
+      height: 10px;
+      color: $btn-offres-color;
+      border-top: 1px $btn-offres-color solid;
+      border-right: 1px $btn-offres-color solid;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      content:'';
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+
+    & span{
+      height: auto;
+      font-size: 14px;
+      font-family: 'proximanova-semibold', sans-serif;
+      color: $btn-offres-color;
+      text-transform: uppercase;
+      line-height: 1px;
+      margin: 2px auto 0;
+      z-index: 1;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      letter-spacing: 1px;
+
+    }
+
+
+  }
+
+
+}
+
+
+@media (min-width: $desktop) {
+.btn{
+  position: relative;
+  margin: auto;
+
+  &_big{
+    height: 80px;
+    left: 92px;
+    font-size: 17px;
+  }
+
+  &_search{
+    height: 80px;
+    left: 110px;
+    padding: 0 50px 0 85px;
+    font-size: 14px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 41px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 25px;
+      height: 25px;
+      background: url(../img/search-icon.png) no-repeat;
+      background-size: contain;
+    }
+
+    &:hover:before {
+      border: $btn-search-border-hover solid 1px;
+    }
+  }
+
+  &__offres{
+    position: relative;
+    margin-top: 41px;
+    left: 368px;
+    width: 402px;
+    height: 80px;
+
+
+    &:after{
+      position: absolute;
+      top: 34px;
+      right: 58px;
+      width: 10px;
+      height: 10px;
+      color: $btn-offres-color;
+      border-top: 1px $btn-offres-color solid;
+      border-right: 1px $btn-offres-color solid;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      content:'';
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+
+    & span{
+      font-size: 17px;
+      margin: 4px 0 0 34px;
+    }
+
+    &:before{
+      position: absolute;
+      top:0;
+      right:0;
+      bottom: 0;
+      left: 0;
+      width: 402px;
+      height: 80px;
+      content:'';
+      z-index: 0;
+      border-radius: 45px;
+      background: rgb(231,74,99); /* Old browsers */
+      background: -moz-linear-gradient(left, rgba(231,74,99,1) 0%, rgba(231,74,99,1) 24%, rgba(232,75,103,1) 33%, rgba(236,79,117,1) 52%, rgba(241,85,136,1) 68%, rgba(241,85,136,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(231,74,99,1) 0%,rgba(231,74,99,1) 24%,rgba(232,75,103,1) 33%,rgba(236,79,117,1) 52%,rgba(241,85,136,1) 68%,rgba(241,85,136,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(231,74,99,1) 0%,rgba(231,74,99,1) 24%,rgba(232,75,103,1) 33%,rgba(236,79,117,1) 52%,rgba(241,85,136,1) 68%,rgba(241,85,136,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e74a63', endColorstr='#f15588',GradientType=1 ); /* IE6-9 */
+      opacity: 0;
+      -webkit-transition: opacity .3s ease;
+      transition: opacity .3s ease;
+    }
+
+    &:hover{
+
+      & span{
+        margin: 4px 0 0 54px;
+      }
+
+      &:after{
+        top: 34px;
+        right: 38px;
+      }
+
+      &:before{
+        opacity: 1;
+      }
+    }
+  }
+
+  &:before {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    left: -3px;
+    bottom: -3px;
+    border: $btn-border-hover solid 1px;
+    border-radius: 40px;
+    opacity: 0;
+    content: '';
+  }
+
+  &:hover:before{
+    -webkit-animation: btn_hover .8s ease;
+    animation: btn_hover .8s ease;
+  }
+
+  @keyframes btn_hover {
+    0%{
+      opacity: 1;
+    }
+    100% {
+      top: -9px;
+      right: -9px;
+      bottom: -9px;
+      left: -9px;
+      opacity: 0;
+    }
+  }
+
+}
+}

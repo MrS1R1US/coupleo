@@ -1,0 +1,174 @@
+.card {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 8px;
+  background-color: $card-back;
+  box-shadow: 0px 1px 3px 0px $card-shadow;
+  margin: 0 auto 35px;
+
+  & img {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    max-height: 265px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  &__title {
+    max-height: 176px;
+    display: block;
+    padding: 23px 20px 22px 31px;
+    margin-bottom: 6px;
+    overflow: hidden;
+
+    a:link,
+    a:active,
+    a:visited{
+      letter-spacing: 1px;
+      line-height: 26px;
+      font-size: 20px;
+      color: $card-title-color-hover;
+      font-family: 'proximanova-semibold', sans-serif;
+    }
+
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 48px;
+
+    & .sale {
+      display: inline-block;
+      width: 123px;
+      height: 51px;
+      padding: 11px 0 0 0;
+      font-size: 30px;
+      font-family: proximanova-light;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      background: $card-price-span-back;
+      background: -webkit-linear-gradient(left, $card-price-span-gradient1 0%, $card-price-span-gradient2 100%);
+      background: linear-gradient(to right, $card-price-span-gradient1 0%, $card-price-span-gradient2 100%);
+    }
+
+    & .summa {
+      width: 160px;
+      color: $card-price-color;
+      text-align: right;
+      padding: 11px 27px 0 0;
+
+
+      & i{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        font-family: 'proximanova-semibold', sans-serif;
+      }
+
+      & b {
+        font-size: 14px;
+        font-family: 'proximanova-regular', sans-serif;
+        display: block;
+        margin: 5px 0;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+
+  &__info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'proximanova-regular', sans-serif;
+    color: $card-info-color;
+    margin-bottom: 20px;
+
+    &-time{
+      position: relative;
+      width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: 19px;
+      letter-spacing: .1px;
+      word-spacing: 1.1px;
+
+       &:before{
+         display: inline-block;
+         width: 25px;
+         height: 25px;
+         margin-right: 7px;
+         background: url(../img/time-icon.png) right top no-repeat;
+         background-size: 25px 25px;
+         vertical-align: middle;
+         content: '';
+       }
+
+      & i{
+        position: relative;
+        top:1px;
+        font-style: normal;
+      }
+     }
+
+    &-adress{
+      position: relative;
+      width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 32px;
+      text-align: right;
+
+      &:before{
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 7px;
+        background: url(../img/adress-icon.png) right top no-repeat;
+        background-size: 20px 25px;
+        vertical-align: middle;
+        content: '';
+      }
+
+      & i{
+        position: relative;
+        top:1px;
+        font-style: normal;
+      }
+    }
+  }
+
+
+}
+
+@media (min-width: $desktop) {
+  .card {
+    height: 601px;
+    margin: 0 0 35px;
+
+    &__title {
+      height: 176px;
+      padding: 23px 20px 22px 31px;
+
+      a:link,
+      a:active,
+      a:visited{
+        font-size: 31px;
+        line-height: 44px;
+        color: $card-title-color;
+      }
+
+      a:hover,
+      a.visited:hover{
+        color: $card-title-color-hover;
+      }
+    }
+  }
+}

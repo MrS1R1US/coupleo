@@ -1,0 +1,214 @@
+.menu{
+
+  &__btn{
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 34px;
+    height: 27px;
+    padding: 13px 0 13px 0;
+    background-color: transparent;
+    z-index: 10;
+    cursor: pointer;
+    border: none;
+
+    & span{
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      -webkit-transition: background-color 0.2s ease;
+      transition: background-color 0.2s ease;
+
+      &:before,
+      &:after{
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: inherit;
+        background-color: inherit;
+        content: '';
+        -webkit-transition: top .3s ease, -webkit-transform .3s ease, background-color .3s ease;
+        transition: top .3s ease-in-out, transform .3s ease, background-color .3s ease;
+
+      }
+
+      &:before{
+        top: 3px;
+      }
+
+      &:after{
+        bottom: 3px;
+      }
+    }
+  }
+
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    background-color: $menu-back;
+    width: 100%;
+    height:100%;
+    -webkit-transition: visibility .3s ease, opacity .3s ease;
+    transition: visibility .3s ease, opacity .3s ease;
+  }
+
+  &__items{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+
+    .home{
+      display: block;
+      opacity: 1;
+      width: 20px;
+      height: 19px;
+      background: url(../img/home-icon.png);
+      background-size: 20px 19px;
+    }
+
+    a:link,
+    a:active,
+    a:visited{
+      color: $menu-color-hover;
+      font-size: 20px;
+      font-family: proximanova-semibold;
+      margin: 10px auto;
+      text-align: center;
+    }
+  }
+
+  &.menu_open{
+
+    .menu__btn {
+
+      position: fixed;
+
+      span {
+        background-color: transparent;
+
+        &:before {
+          top: 13px;
+          background-color: #fff;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+        }
+
+        &:after {
+          bottom: 13px;
+          background-color: #fff;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+        }
+      }
+    }
+
+    .menu__wrap{
+      opacity:1;
+      visibility: visible;
+    }
+    
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .menu{
+  &__btn{
+    top: 40px;
+    right: 40px;
+  }
+
+  &.menu__open{
+    .menu__btn{
+      top: 40px;
+      right: 40px;
+    }
+  }
+}
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .menu{
+    &__btn{
+      top: 40px;
+      right: 40px;
+    }
+
+    &.menu__open{
+      .menu__btn{
+        top: 40px;
+        right: 40px;
+      }
+    }
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 612px;
+    position: absolute;
+    top: 46px;
+    right: 0;
+
+    &__btn{
+      opacity:0;
+      visibility: hidden;
+    }
+
+    &__wrap{
+      display: block;
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      background: none;
+    }
+
+    &__items{
+      display: inline-block;
+      position: relative;
+      margin-right: 1px;
+
+      .home{
+        display: inline-block;
+        opacity: 0.5;
+        width: 20px;
+        height: 19px;
+        background: url(../img/home-icon.png);
+        background-size: 20px 19px;
+
+        &:hover{
+          opacity: 1;
+        }
+      }
+
+      a:link,
+      a:active,
+      a:visited{
+        color: $menu-color;
+        display: inline-block;
+        margin: 0 34px 0 0;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        text-align: left;
+      }
+
+      a:hover,
+      a.visited:hover{
+        color: $menu-color-hover;
+      }
+
+    }
+  }
+}

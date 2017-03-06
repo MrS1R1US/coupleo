@@ -1,0 +1,88 @@
+.hero{
+  display: block;
+  position: relative;
+  min-height: 500px;
+  height: 100vh;
+  background: url(../img/hero.jpg) no-repeat right bottom;
+  background-color: $hero-back;
+  background-size: cover;
+
+  &__info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+  }
+
+  &__title{
+    display: inline-block;
+    color: $hero-title-color;
+    font-family:cliche;
+    font-size: 39px;
+    margin-bottom: 23px;
+  }
+
+  &__description{
+    display: inline-block;
+    color: $hero-description-color;
+    font-family: proximanova-semibold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+
+  &__buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 36px auto 0;
+    text-align: left;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .hero{
+
+    &__info{
+      width: 70%;
+    }
+
+    &__title{
+      font-size: 50px;
+      margin-bottom: 23px;
+    }
+
+    &__description{
+      font-size: 21.1px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .hero{
+
+    &__title{
+      font-size: 78px;
+      margin-bottom: 23px;
+    }
+
+    &__description{
+      font-size: 21.1px;
+      letter-spacing: 0;
+    }
+
+    &__buttons{
+      display: block;
+      width: 800px;
+      margin: 72px auto 0;
+      text-align: left;
+    }
+  }
+}

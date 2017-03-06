@@ -1,0 +1,195 @@
+body{
+  background-color: $body-back;
+}
+
+.site {
+  &__header{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+
+    .header__wrapper{
+      position: relative;
+    }
+  }
+
+  .content__title{
+    width: 90%;
+    padding-bottom: 21px;
+    margin: 100px auto 60px;
+    border-bottom: 1px $content-tittle-border solid;
+    color: $content-title-color;
+    font-size: 38px;
+    font-family: proximanova-light;
+    text-align: center;
+    letter-spacing: 2.5px;
+    word-spacing: 5px;
+
+    & span{
+      display: block;
+      margin-top: 12px;
+      color: $content-title-span-color;
+      font-size: 18px;
+      letter-spacing: 1px;
+      word-spacing: -1px;
+    }
+  }
+
+  .content__page{
+    width: 90%;
+    max-width: 1140px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  &__footer{
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+    padding: 50px 0 30px;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 5px;
+      left: 0;
+      right: 0;
+      background: #4f1189;
+      background: -webkit-linear-gradient(left, #4f1189 0%,#f05588 100%);
+      background: linear-gradient(to right, #4f1189 0%,#f05588 100%);
+    }
+
+    &-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    & span{
+      display: block;
+      color: $footer-copyright-color;
+      font-size: 17px;
+      font-family: 'proximanova-regular', sans-serif;
+      letter-spacing: 0.4px;
+      margin-bottom: 30px;
+    }
+
+    &-menu{
+      display: block;
+      color: $footer-menu-links-color;
+
+      a,
+      a:link,
+      a:active,
+      a.visited{
+        display: block;
+        position: relative;
+        color: $footer-menu-links-color;
+        font-size: 14px;
+        letter-spacing: 0.6px;
+        font-family: 'proximanova-semibold', sans-serif;
+        text-decoration: none;
+        margin: 0 0 20px;
+      }
+
+      a::before{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        height: 1px;
+        background-color: $footer-menu-links-hover;
+        width: 0;
+        content: '';
+        transition: all .3s ease;
+      }
+
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .site {
+    &__header{
+      width: 1170px;
+    }
+
+    .content__title{
+    width: 780px;
+    margin: 134px auto 90px;
+    font-size: 55.1px;
+
+    & span{
+      font-size: 21px;
+    }
+
+  }
+
+    .content__page{
+    width: 90%;
+    max-width: 1140px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+    &__footer{
+      position: relative;
+      width: 100%;
+      padding: 101px 0  71px;
+
+      &-container{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        width: 1140px;
+        margin: 0 auto;
+      }
+
+      & span{
+        display: inline-block;
+        font-size: 17px;
+      }
+
+      &-menu{
+        display: inline-block;
+
+        a:link,
+        a:active,
+        a.visited{
+         display: inline-block;
+         font-size: 17px;
+         margin-left: 27px;
+      }
+
+        a::before{
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          height: 1px;
+          background-color: $footer-menu-links-hover;
+          width: 0;
+          content: '';
+          transition: all .3s ease;
+        }
+
+        a:hover::before{
+        left: 0;
+        width: 100%;
+      }
+      }
+    }
+  }
+}
+

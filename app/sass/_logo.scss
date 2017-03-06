@@ -1,0 +1,39 @@
+.logo{
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  & img{
+  width: 130px;
+  height: 46px;
+  }
+}
+
+
+@media (min-width: $phone-landscape) {
+
+}
+@media (min-width: $tablet-portrait) {
+  .logo{
+    top: 30px;
+    left: 30px;
+    & img{
+      width: 149px;
+      height: 53px;
+    }
+  }
+}
+@media (min-width: $tablet-landscape) {
+
+}
+@media (min-width: $desktop) {
+.logo{
+  top: 45px;
+  left: 0px;
+  & img{
+    width: 149px;
+    height: 53px;
+  }
+}
+}
