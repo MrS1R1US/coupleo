@@ -8,12 +8,12 @@ for(i = 0; i <= 9; i++){
 }
 
 for(i = 0; i <= 9; i++){
-    console.log(arr[i]);
     for(s = 0; s <= 9; s++){
         if (arr[i] < arr[s]){
-            var mas = arr[i];
-            arr[i] = arr[s];
-            arr[s] = mas;
+            arr[i] = arr[i] + arr[s];
+            arr[s] = arr[i] - arr[s] ;
+            arr[i] = arr[i] - arr[s];
+
         }
     }
 }

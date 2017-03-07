@@ -6,7 +6,6 @@
   margin: 10px auto;
   border: 1px $btn-border solid;
   border-radius: 25px;
-  font-family: proximanova-semibold;
   font-size: 15px;
   line-height: 1px;
   color: $btn-color;
@@ -19,6 +18,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    font-family: 'proximanova-semibold', sans-serif;
     text-align: center;
   }
 
